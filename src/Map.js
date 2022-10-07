@@ -19,7 +19,7 @@ const ResetMapView = ({ selectSearch }) => {
 };
 
 function Map({ selectSearch }) {
-  const position = ["12.9767936", "77.590082"];
+  const position = selectSearch ? [selectSearch?.lat, selectSearch?.lon] : ["12.9767936", "77.590082"];
   return (
     <MapContainer
       center={position}
@@ -28,7 +28,7 @@ function Map({ selectSearch }) {
       scrollWheelZoom={false}
     >
       <TileLayer url="https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=7Ny1ZiBJDUdxAHlSGrrH" />
-      {<Marker position={position} icon={Icon}></Marker>}
+      <Marker position={position} icon={Icon}></Marker>
       <ResetMapView selectSearch={selectSearch} />
     </MapContainer>
   );
