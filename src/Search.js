@@ -22,7 +22,6 @@ function Search({setSelectSearch}) {
             setSearchList([...res])
         });
     }
-    console.log(searchList)
   return (
     <div style={{}}>
         <Input type="text" name="search" value ={searchText} onChange = {(e) => setSearchText(e.target.value)} placeholder="Search here..." />

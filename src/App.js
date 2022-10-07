@@ -5,8 +5,6 @@ import Search from './Search';
 
 function App() {
   const [selectSearch, setSelectSearch] = useState(null);
-  console.log(selectSearch);
-
   return (
     <div className="App">
       <div className='map'>
